@@ -1,0 +1,24 @@
+This is test for the long lines answer and question
+
+What is python?
+Python is a programming language. It is a Intepreted programming language.
+this means the code is complied line by line instaed of compiling the full code at once.
+It throws error at runtime instead of complieing at once and shwing all the errors it shows error when
+it occers.
+
+
+This is test for the long lines answer and question
+
+What is python?
+Python is a programming language. It is a Intepreted programming language.
+this means the code is complied line by line instaed of compiling the full code at once.
+It throws error at runtime instead of complieing at once and shwing all the errors it shows error when
+it occers.
+
+This is test for the long lines answer and question
+
+What is python?
+Python is a programming language. It is a Intepreted programming language.
+this means the code is complied line by line instaed of compiling the full code at once.
+It throws error at runtime instead of complieing at once and shwing all the errors it shows error when
+it occers.

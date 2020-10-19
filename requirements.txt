@@ -1,0 +1,5 @@
+Flask
+textwrap3
+Pillow
+PyPDF2
+fpdf

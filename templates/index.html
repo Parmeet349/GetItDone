@@ -1,0 +1,387 @@
+<!-- GET IT DONE -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="static/circle_logo.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Dawning+of+a+New+Day&family=Homemade+Apple&family=Indie+Flower&family=Nanum+Brush+Script&display=swap"
+    rel="stylesheet">
+
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@1,700&display=swap" rel="stylesheet">
+
+  <title>Get It Done</title>
+
+  <script>
+
+
+
+    // GET IT DONE
+
+    //  FOR MATERIALIZE SELECT
+
+    document.addEventListener('DOMContentLoaded', function () {
+      var elems = document.querySelectorAll('select');
+      var instances = M.FormSelect.init(elems);
+    });
+
+    // COLLEGE NAME INPUT FIELD CHECK
+
+    function check() {
+      if (document.getElementById("coll-check").checked == true) {
+        document.getElementById("coll-field").style.display = "block";
+        document.getElementById("coll-field").setAttribute("required", ".*\S.*");
+      } else {
+        document.getElementById("coll-field").style.display = "none";
+        document.getElementById("coll-field").removeAttribute("required", ".*\S.*");
+      }
+    }
+
+    //  FUNCTION TO VALIDATE EMPTY TEXTAREA AND FILE INPUT
+
+    function validate() {
+      var areaText = document.querySelector("textarea");
+      var fileName = document.querySelector("input[type=file]");
+      if (areaText.value.trim() == "" && fileName.value.trim() == "") {
+        alert("Please Enter Text Or Upload File");
+        return false;
+      } else {
+        true;
+      }
+    }
+
+    // FUNCTION TO VALIDATE FILE TYPE
+
+    function checkFile() {
+      var fileInput = document.querySelector("input[type=file]");
+      var filePath = fileInput.value;
+      const allowedExtensions = /(\.txt)$/i;
+      if (!allowedExtensions.exec(filePath)) {
+        alert("Please upload only .txt extention file");
+        fileInput.value = '';
+        return false;
+      } else {
+        true;
+      }
+    }
+  </script>
+
+  <style>
+    /* GET IT DONE */
+
+    /* GRADIENT FOR TITLE */
+
+    :root {
+      --gradient: linear-gradient(90deg, #ee6352, purple, #827fee,#ee6352);
+
+    }
+
+    /* BODY DEFAULT STYLES*/
+
+    body {
+      padding: 0;
+      margin: 0;
+      font-family: 'Noto Sans JP', sans-serif;
+    }
+
+    /* TITLE */
+
+    .title {
+      font-size: 4.5rem;
+      font-family: 'Merriweather Sans', sans-serif;
+      background-image: var(--gradient);
+      color: transparent;
+      -webkit-background-clip: text;
+      background-size: 300%;
+      animation: bg-animation 25s infinite alternate;
+    }
+
+    /* GRADIENT ANIMATION */
+
+    @keyframes bg-animation {
+      0% {
+        background-position: left
+      }
+
+      50% {
+        background-position: right
+      }
+
+      100% {
+        background-position: left
+      }
+    }
+
+    /* NAME */
+
+    #name-text {
+      font-size: 1.5em;
+    }
+
+    /* NAME CHECKBOX */
+
+    #name-check {
+      font-size: 1.2em;
+      color: black;
+    }
+
+    /* CHECKBOXES */
+
+    [type="checkbox"]:checked+span:not(.lever):before {
+      border-right: 2px solid #827fee;
+      border-bottom: 2px solid #827fee;
+    }
+
+    /* INK COLOR TEXT */
+
+    #ink-color {
+      font-family: inherit;
+      margin-bottom: -5px;
+      font-size: 1.4em;
+      color: black;
+      user-select: none;
+      font-weight: normal;
+    }
+
+    /* COLORS RADIOBUTTONS  */
+
+    [type="radio"]+span:before,
+    [type="radio"]+span:after {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* RED */
+
+    [type="radio"].red:not(:checked)+span::before {
+      border: 3px solid #BD2031;
+    }
+
+    [type="radio"].red:checked+span:before {
+      border: 3px solid #BD2031;
+    }
+
+    [type="radio"].red:checked+span:after {
+      border: 2px solid #BD2031;
+      background-color: #BD2031;
+    }
+
+    /* BLACK */
+
+    [type="radio"].black:not(:checked)+span::before {
+      border: 3px solid #1B1B1B;
+    }
+
+    [type="radio"].black:checked+span:before {
+      border: 3px solid #1B1B1B;
+    }
+
+    [type="radio"].black:checked+span:after {
+      border: 2px solid #1B1B1B;
+      background-color: #1B1B1B;
+    }
+
+    /* BLUE */
+
+    [type="radio"].blue:not(:checked)+span::before {
+      border: 3px solid #0E26B1;
+    }
+
+    [type="radio"].blue:checked+span:before {
+      border: 3px solid #0E26B1;
+    }
+
+    [type="radio"].blue:checked+span:after {
+      border: 2px solid #0E26B1;
+      background-color: #0E26B1;
+    }
+
+    /* FONTS */
+
+    .select-wrapper {
+      margin-top: 1px;
+    }
+
+    .select-wrapper input.select-dropdown {
+      font-weight: normal;
+      font-family: inherit;
+      font-size: 1.5em;
+      height: 3.1rem;
+    }
+
+    li:nth-child(2)>span {
+      font-family: 'Indie Flower', cursive;
+      font-size: 1.5rem;
+      color: black;
+    }
+
+    li:nth-child(3)>span {
+      font-family: 'Dawning of a New Day', cursive;
+      font-size: 1.6rem;
+      color: black;
+    }
+
+    li:nth-child(4)>span {
+      font-family: 'Homemade Apple', cursive;
+      font-size: 1.2rem;
+      color: black;
+    }
+
+    li:nth-child(5)>span {
+      font-family: 'Nanum Brush Script', cursive;
+      font-size: 1.5rem;
+      color: black;
+    }
+
+    /* COLLEGE FIELD*/
+
+    .coll-div {
+      margin-top: 25px;
+    }
+
+    #coll-name {
+      font-size: 1.2em;
+      color: black;
+    }
+
+    #coll-field {
+      display: none;
+      font-size: 1.5em;
+    }
+
+    /* OR */
+
+    .or {
+      font-size: 1.5em;
+      user-select: none;
+    }
+
+    /* FILE BUTTON */
+
+    .btn {
+      /* background: var(--gradient); */
+      text-transform: capitalize;
+      font-size: 1.2em;
+      background-color: #827fee;
+    }
+
+    .btn:hover,
+    .btn-large:hover,
+    .btn:focus,
+    .btn-large:focus {
+      background-color: #7471d9;
+    }
+
+    /* MAKE ASSIGNMENT BUTTON */
+
+    .submit {
+      text-transform: capitalize;
+      font-size: 1.4em;
+      /* background-color: #827ffe; */
+      background-color: #827fee;
+    }
+
+    /* MEDIA QUERY FOR LARGE SCREEN */
+
+    @media screen and (min-width:900px) {
+      .container {
+        width: 40vw;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container center">
+    <h1 class="title">Get it Done</h1>
+
+    <form onsubmit="return validate();" action="#" method="post" enctype="multipart/form-data" class="row">
+
+      <div class="col input-field s12">
+        <input type="text" name="uname" id="name" class="validate" autocomplete="off" required pattern=".*\S.*">
+        <label for="name" id="name-text">Enter Your Name</label>
+      </div>
+
+      <div class="col s12">
+        <label>
+          <input type="checkbox" name="name_check" value="name_yes" />
+          <span id="name-check">Want Your Name On Assignment?</span>
+        </label>
+      </div>
+
+      <div class="col s6 m6 l6">
+        <p id="ink-color">Select Ink Color</p>
+        <label>
+          <input class="with-gap red" name="radioColor" value="red" type="radio" required />
+          <span></span>
+        </label>
+        <label>
+          <input class="with-gap black" name="radioColor" value="black" type="radio" />
+          <span></span>
+        </label>
+        <label>
+          <input class="with-gap blue" name="radioColor" value="blue" type="radio" />
+          <span></span>
+        </label>
+      </div>
+
+      <div class="input-field col s6 m6 l6">
+        <select name="drop_font">
+          <option value="0" disabled selected>Select Font</option>
+          <option value="1" class="Indie-font">Handwriting-1</option>
+         <!-- <option value="2" class="Dwaning-font">Dwaning</option> -->
+          <option value="3" class="Apple-font">Handwriting-2</option>
+          <option value="4" class="Nanum-font">Handwriting-3</option>
+        </select>
+      </div>
+
+      <div class="col s12 coll-div">
+        <label>
+          <input type="checkbox" name="unicheck" value="yes" id="coll-check" onclick="check();" />
+          <span id="coll-name">Want Your College Name On Assignment?</span>
+        </label>
+        <input type="text" class="validate" name="uniname" id="coll-field" placeholder="Enter College Name"
+          autocomplete="off">
+      </div>
+
+      <div class="input-field col s12">
+        <i class="material-icons prefix">assignment</i>
+        <textarea id="text-area" class="materialize-textarea" name="etext"
+          style="height: 100px; max-height: 250px; overflow-y: auto;"></textarea>
+        <label for="text-area">Enter Or Paste Your Text</label>
+        <span class="or">Or Upload A Text File</span>
+      </div>
+
+      <div class="file-field input-field col s12">
+        <div class="btn">
+          <span>Select a text file</span>
+          <input type="file" name="fupload" accept="text/plain" onchange=" return checkFile();">
+        </div>
+        <div class="file-path-wrapper">
+          <input class="file-path validate" type="text">
+        </div>
+      </div>
+
+      <button class="btn-large submit waves-effect waves-light col s8 push-s2" type="submit" name="btnSubmit"
+        value="Submit">Make
+        Assignment
+      </button>
+
+    </form>
+
+  </div>
+
+</body>
+</html>

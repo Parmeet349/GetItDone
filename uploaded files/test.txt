@@ -1,0 +1,10 @@
+
+Assignment no 1 
+
+When you use a tradition web application we use a browser , we talk to central server over a network all of the code to your web application lives in a server and all of the data is stored in a centralized database. Anytime you use your application you must talk the central server . And this is how web application works it’s really bad to build a voting app this way . Here’s why 
+1)All of the data in the database could any time our vote could change or could be deleted entirely.
+2)All of the code of our application could change and means that our rules in the election could change. We want to ensure that our votes are counted all our votes are only counted once and correct candidates with most number of votes would win.
+Does blockchain solve this problem and why it is better choice for building a voting application?
+
+
+On the blockchain the data doesn’t reside in a single server. It is distributed across every node. Distributed across device connected to the blockchain. Blockchain is a peer-to-peer connection of nodes that talk to each other. If have a device and its connected to the blockchain network then you are a node and you talk to all the  other nodes. You will share some of the responsibility of server might think of . One you will get the copy of the data that is shared .All of this data is contained in bundles of records called blocks which are chained together to create a pubic ledger and all of the nodes work together to ensure that data in the public tion because it means that our account sent the transaction when we vote and our vote will go to the candidate and be recorded forever. Because all of the data is shared across devices in the blockchain. It is database And as each node talk to each other it is a network So instead of traditional web model you can think of blockchain as database and network all in one.
